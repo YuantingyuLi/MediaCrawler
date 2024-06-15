@@ -1,10 +1,11 @@
 # 基础配置
-PLATFORM = "xhs"
+PLATFORM = "wb"
 KEYWORDS = "电解质水"
-LOGIN_TYPE = "qrcode"  # qrcode or phone or cookie
+LOGIN_TYPE = "phone"  # qrcode or phone or cookie
 COOKIES = ""
 # 具体值参见media_platform.xxx.field下的枚举值，展示只支持小红书
-SORT_TYPE = "popularity_descending"
+#SORT_TYPE = 0
+SEARCH_TYPE = "1"
 CRAWLER_TYPE = "search"  # 爬取类型，search(关键词搜索) | detail(帖子详情)| creator(创作者主页数据)
 
 # 是否开启 IP 代理
@@ -35,7 +36,7 @@ USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
 START_PAGE = 1
 
 # 爬取视频/帖子的数量控制
-CRAWLER_MAX_NOTES_COUNT = 20
+CRAWLER_MAX_NOTES_COUNT = 1000
 
 # 并发爬虫数量控制
 MAX_CONCURRENCY_NUM = 4
@@ -44,7 +45,7 @@ MAX_CONCURRENCY_NUM = 4
 ENABLE_GET_IMAGES = False
 
 # 是否开启爬评论模式, 默认不开启爬评论
-ENABLE_GET_COMMENTS = False
+ENABLE_GET_COMMENTS = True
 
 # 是否开启爬二级评论模式, 默认不开启爬二级评论, 目前仅支持 xhs, bilibili
 # 老版本项目使用了 db, 则需参考 schema/tables.sql line 287 增加表字段
@@ -112,7 +113,7 @@ KS_CREATOR_ID_LIST = [
 
 #词云相关
 #是否开启生成评论词云图
-ENABLE_GET_WORDCLOUD = False
+ENABLE_GET_WORDCLOUD = True
 # 自定义词语及其分组
 #添加规则：xx:yy 其中xx为自定义添加的词组，yy为将xx该词组分到的组名。
 CUSTOM_WORDS = {

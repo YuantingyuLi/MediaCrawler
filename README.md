@@ -65,7 +65,7 @@
    ### 一些其他支持项，也可以在config/base_config.py查看功能，写的有中文注释
    
    # 从配置文件中读取关键词搜索相关的帖子并爬取帖子信息与评论
-   python main.py --platform dy --lt qrcode --type search
+   python main.py --platform wb --lt phone --type search
    
    # 从配置文件中读取指定的帖子ID列表获取指定帖子的信息与评论信息
    python main.py --platform dy --lt qrcode --type detail
